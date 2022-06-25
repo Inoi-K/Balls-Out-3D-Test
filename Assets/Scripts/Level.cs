@@ -371,7 +371,7 @@ public class Level : MonoBehaviour, IWaveObserver, ILevelObserver, ICaptureBallO
     private void SpawnBalls( Labyrinth newLab, int max)
     {
         var totalMax = RemoteSettings.GetInt("maxBalls", 450);
-        var hasDifferentBalls = RemoteSettings.GetBool("hasDifferentBalls", false);
+        var hasDifferentBalls = RemoteSettings.GetBool("hasDifferentBalls", true); // Setting the bool value in RemoteSettingsDataStore has no effect
         var deep = 2;
 
         var sq = (int)Mathf.Sqrt(max / 5) + 1;
