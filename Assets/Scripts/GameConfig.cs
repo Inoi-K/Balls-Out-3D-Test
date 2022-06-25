@@ -14,8 +14,8 @@ public class GameConfig : ScriptableObject
    // public Labyrinth[] fanLabyrinths;
 
     public Ball ball;
-    public Ball ballBig;
     public Ball ballMid;
+    public Ball ballBig;
 
     public int wavesCount = 3;
 
@@ -31,9 +31,9 @@ public class GameConfig : ScriptableObject
     public Material ballMiddleMaterial;
     public Material ballBigMaterial;
     public Color[] ballColors;
-    public Color[] ballBigColors;
     public Color[] ballMiddleColors;
-
+    public Color[] ballBigColors;
+    
     public Color[] gradient1;
     public Color[] gradient2;
     public Color[] gradient3;

@@ -9,7 +9,7 @@ public class FinishMenu : MonoBehaviour, ILevelObserver
 {
     public static FinishMenu instance;
     public PlayerState playerState;
-    public GameConfig gameConfig;
+    //public GameConfig gameConfig;
 
     public Text scoreText;
     public Text levelText;
@@ -27,6 +27,8 @@ public class FinishMenu : MonoBehaviour, ILevelObserver
 
     bool bonus;
 
+    int currentSceneIndex;
+    
     public void OnLevelComplete()
     {
         DOTween.Sequence().AppendInterval(RemoteSettings.GetFloat("FinishMenuDelay", 1.5f)).AppendCallback(() =>
@@ -83,7 +85,7 @@ public class FinishMenu : MonoBehaviour, ILevelObserver
     {
         instance = this;
 
-
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     // Start is called before the first frame update
@@ -116,12 +118,12 @@ public class FinishMenu : MonoBehaviour, ILevelObserver
         if (Level.instance.CanShowAds())
         {
             Level.instance.ShowAds((bool result) => {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(currentSceneIndex);
             });
         }
         else
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(currentSceneIndex);
         }
     }
 
