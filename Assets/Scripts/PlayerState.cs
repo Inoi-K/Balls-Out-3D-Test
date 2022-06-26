@@ -168,7 +168,7 @@ public class PlayerState : ScriptableObject
     public void Load()
     {
         best = PlayerPrefs.GetInt("best");
-        //level = PlayerPrefs.GetInt("level");
+        level = PlayerPrefs.GetInt("level");
         vibrate = PlayerPrefs.GetInt("vibrate", 1) == 1;
     }
 }

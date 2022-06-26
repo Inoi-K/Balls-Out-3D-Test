@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 14dbe4b9d044d49439773cfab942cae7
+  - enabled: 1
+    path: Assets/Scenes/KiwiScene.unity
+    guid: 353bfe602c689644db52b81f247ca091
+  - enabled: 1
+    path: Assets/Scenes/FruitsScene.unity
+    guid: 87245613aecacf7419897e7d83fc398e
+  - enabled: 1
+    path: Assets/Scenes/FluidScene.unity
+    guid: f8937f6d80ef78e4db1b9e9c6d790cf6
   m_configObjects: {}

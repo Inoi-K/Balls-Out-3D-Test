@@ -380,12 +380,14 @@ public class Level : MonoBehaviour, IWaveObserver, ILevelObserver, ICaptureBallO
         {
             for (var j = 0; j < sq*sq; j++)
             {
+                if (count >= max) break; //continue; Why use 'continue' if the count value will not be reduced in the next iterations. It's more efficient to use 'break'
+                
                 float scaleFactor = Random.Range(0f, 1f);
                 int ballSize = count % 10;
                 if (ballSize < 7 || !hasDifferentBalls) ballSize = 0;
                 else if (ballSize < 9) ballSize = 1;
                 else if (ballSize < 10) ballSize = 2;
-                if (count >= max) continue;
+                
                 var ball = Instantiate(ballSize == 2 ? gameConfig.ballBig : ballSize == 1 ? gameConfig.ballMid : gameConfig.ball, newLab.transform);
                 ball.transform.localPosition = Vector3.right * (j % sq - sq / 2) * 0.1f + Vector3.down * (j / sq - sq / 2) * 0.1f + Vector3.forward * d * 0.1f;
 

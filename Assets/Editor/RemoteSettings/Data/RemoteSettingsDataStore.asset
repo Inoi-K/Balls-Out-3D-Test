@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rsKeyList:
   - key: hasDifferentBalls
-    value: false
+    value: true
     type: bool
   - key: ballSize0
     value: 1.300000
