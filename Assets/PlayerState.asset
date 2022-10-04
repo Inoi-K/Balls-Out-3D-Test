@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   best: 70283
   ads: 0
-  level: 11
-  totalBalls: 80
-  totalBallsPerfect: 80
+  level: 66
+  totalBalls: 350
+  totalBallsPerfect: 350
   capturedBalls: 0
   totalWaves: 3
   wave: 0
